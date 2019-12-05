@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: skaffold-spring-demo
+  labels:
+    name: skaffold-spring-demo
+spec:
+  ports:
+    - port: 80
+      targetPort: 8080
+      protocol: TCP
+  selector:
+    app: skaffold-spring-demo
+  type: LoadBalancer
